@@ -1,11 +1,11 @@
 % cardfin-c
 % https://docs.google.com/document/d/1Tz553wVIl87WpTgMiK2KIr6x219J3IGTx924iE_6HMo/edit?tab=t.0
 % !TEX encoding = UTF-8 Unicode
-% https://www.site24x7.com/tools/time-stamp-converter.html 1767041286
+% https://www.site24x7.com/tools/time-stamp-converter.html 1767041618
 \documentclass[12pt,letterpaper]{article}
 \usepackage{fancyhdr}
 \fancyhf{}
-\fancyfoot[R]{{\tiny cardfin-c,\ \filemodprintdate{\jobname},\ \filemodprinttime{\jobname},\ 1767041286}} % https://www.site24x7.com/tools/time-stamp-converter.html (https://www.unixtimestamp.com/ bad)
+\fancyfoot[R]{{\tiny cardfin-c,\ \filemodprintdate{\jobname},\ \filemodprinttime{\jobname},\ 1767041618}} % https://www.site24x7.com/tools/time-stamp-converter.html (https://www.unixtimestamp.com/ bad)
 \renewcommand{\headrulewidth}{0pt}
 \fancyfoot[C]{\thepage}
 \usepackage[T1]{fontenc}
@@ -38,13 +38,13 @@
 
 \nn The statements proved here are almost obvious and not too difficult to find in the literature. I wrote this short text to make them as easily available as possible. 
 
-Let $\N$ be the set of nonnegative integers, and, for each $n\in\N$ set $[n]:=\{1,2,\ldots,n\}$ (in particular $[0]=\varnothing$). If $X$ is a set, say that a bijection $[n]\to X$ is a \textbf{count} of $X$, and that $n$ is the \textbf{result} of the count. Say that $X$ is \textbf{finite} if it admits a count $[n]\to X$ for some $n\in\N$. If $X$ and $Y$ are two sets, write $X\simeq Y$ to indicate that there is a bijection $X\to Y$. 
+Let $\N$ be the set of nonnegative integers, and, for each $n\in\N$ set $[n]:=\{1,2,\ldots,n\}$ (in particular $[0]=\varnothing$). If $X$ is a set, say that a bijection $[n]\to X$ is a \textbf{count} of $X$, and that $n$ is the \textbf{result} of the count. Say that $X$ is \textbf{finite} if it admits a count $[n]\to X$ for some $n\in\N$. 
 
 \begin{thm}\label{T}
 If a set $X$ is finite, then any two counts of $X$ give the same result. 
 \end{thm} 
 
-If such is the case and the result is $n$, we say that $X$ \textbf{has} $n$ \textbf{elements}. The theorem will follow from the proposition below: 
+If such is the case and the result is $n$, we say that $X$ \textbf{has} $n$ \textbf{elements}. If $X$ and $Y$ are two sets, write $X\simeq Y$ to indicate that there is a bijection $X\to Y$. The theorem will follow from the proposition below: 
 
 \begin{prop}\label{P}
 If $m,n\in\N$ satisfy $[m]\simeq[n]$, then we have $m=n$. 
