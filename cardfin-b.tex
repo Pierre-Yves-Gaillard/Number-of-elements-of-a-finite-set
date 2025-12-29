@@ -1,0 +1,96 @@
+% cardfin-b
+% https://docs.google.com/document/d/1CImzQjaSTAOOPBvZoWwzTb-bmzJaUEaGBFs-lTfyllE/edit?tab=t.0
+% !TEX encoding = UTF-8 Unicode
+% https://www.site24x7.com/tools/time-stamp-converter.html 1767026069
+\documentclass[12pt,letterpaper]{article}
+\usepackage{fancyhdr}
+\fancyhf{}
+\fancyfoot[R]{{\tiny cardfin-b,\ \filemodprintdate{\jobname},\ \filemodprinttime{\jobname},\ 1767026069}} % https://www.site24x7.com/tools/time-stamp-converter.html (https://www.unixtimestamp.com/ bad)
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\thepage}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsmath,amsthm} 
+%\usepackage[letterpaper,top=30pt,left=40pt,right=40pt,bottom=60pt]{geometry}
+\usepackage[letterpaper,top=40pt,left=60pt,right=60pt,bottom=80pt]{geometry}
+\usepackage{filemod}%https://stackoverflow.com/questions/2118972/latex-command-for-last-modified
+\usepackage{microtype}
+%\usepackage{tikz-cd}\usepackage{varwidth}\usepackage{comment}
+\usepackage[pdfusetitle]{hyperref}
+%\usepackage{marvosym}% emoji https://tex.stackexchange.com/questions/3695/smileys-in-latex https://ctan.org/pkg/marvosym?lang=en
+\pagestyle{fancy}
+%\pagestyle{empty}
+%\setlength\parindent{0pt}
+\setlength{\parskip}{3pt} % variable
+%\renewcommand{\baselinestretch}{1.1} % variable
+\newtheorem{thm}{Theorem}%[section]
+%\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newcommand{\nn}{\noindent}
+\newcommand{\N}{\mathbb N}
+\begin{document}% \tiny \scriptsize \footnotesize \small \normalsize \large \Large \LARGE \huge \Huge 
+\begin{center}
+{\large Number of elements of a finite set}\footnote{This text is available at \\ \url{https://github.com/Pierre-Yves-Gaillard/Number-of-elements-of-a-finite-set}.}\medskip 
+
+{\footnotesize Pierre-Yves Gaillard}
+\end{center}
+
+\nn The statements proved here are almost obvious and not too difficult to find in the literature. I wrote this short text to make them as easily available as possible. 
+
+Let $\N$ be the set of nonnegative integers, and, for each $n\in\N$ set $[n]:=\{1,2,\ldots,n\}$ (in particular $[0]=\varnothing$). If $X$ and $Y$ are two sets, write $X\simeq Y$ to indicate that there is a bijection $X\to Y$. If $X\simeq[n]$ for some $n\in\N$ say that $X$ is \textbf{finite}. 
+
+\begin{thm}\label{T}
+If a set $X$ is finite, then there is a \emph{unique} $n\in\N$ such that $X\simeq[n]$. 
+\end{thm} 
+
+If such is the case, we say that $X$ \textbf{has} $n$ \textbf{elements}. The theorem will follow from the proposition below: 
+
+\begin{prop}\label{P}
+If $m,n\in\N$ satisfy $[m]=[n]$, then we have $m=n$. 
+\end{prop} 
+
+If $X$ is a set and $a,b$ are in $X$, then we define the map $[X,a,b]:X\to X$ by 
+$$
+[X,a,b](x)=
+\begin{cases}
+b&\text{if }x=a\\ 
+a&\text{if }x=b\\ 
+x&\text{otherwise.}
+\end{cases}
+$$ 
+The $[X,a,b]$ is its own inverse; in particular it is bijective. 
+
+\begin{lem}\label{La}
+If $X$ and $Y$ are sets such that $X\simeq Y$, and if $a$ is in $X$ and $b$ in $Y$, then there is a bijection $X\to Y$ mapping $a$ to $b$.  
+\end{lem} 
+
+\begin{proof}
+By assumption there is a bijection $f:X\to Y$. Then $[Y,f(a),b]\circ f$ does the job.  
+\end{proof} 
+
+\begin{lem}\label{Lb}
+If $X$ and $Y$ are sets such that $X\simeq Y$, and if $a$ is in $X$ and $b$ in $Y$, then we have $X\setminus\{a\}\simeq Y\setminus\{b\}$.  
+\end{lem} 
+
+\begin{proof}
+By Lemma \ref{La} there is a bijection $f:X\to Y$ mapping $a$ to $b$. Then $f$ induces a bijection $X\setminus\{a\}\to Y\setminus\{b\}$. 
+\end{proof} 
+
+\begin{lem}\label{Lc}
+If $m$ and $n$ are \emph{positive} integers such that $[m]\simeq[n]$, then we have $[m-1]\simeq[n-1]$.  
+\end{lem} 
+
+\begin{proof}
+Apply Lemma \ref{Lb} with $X=[m],Y=[n],a=m,b=n$. 
+\end{proof} 
+
+\begin{proof}[Proof of Proposition \ref{P}]
+Let $m,n\in\N$ satisfy $[m]\simeq[n]$. We must show $m=n$. We can assume $m\le n$. Lemma~\ref{Lc} implies 
+$$
+[m-1]\simeq[n-1],\ [m-2]\simeq[n-2],\ ...,\ [0]\simeq[n-m],
+$$ 
+and thus $m=n$, as required. 
+\end{proof} 
+
+\end{document}
