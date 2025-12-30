@@ -1,11 +1,11 @@
 % cardfin-c
 % https://docs.google.com/document/d/1Tz553wVIl87WpTgMiK2KIr6x219J3IGTx924iE_6HMo/edit?tab=t.0
 % !TEX encoding = UTF-8 Unicode
-% https://www.site24x7.com/tools/time-stamp-converter.html 1767041618
+% https://www.site24x7.com/tools/time-stamp-converter.html 1767095642
 \documentclass[12pt,letterpaper]{article}
 \usepackage{fancyhdr}
 \fancyhf{}
-\fancyfoot[R]{{\tiny cardfin-c,\ \filemodprintdate{\jobname},\ \filemodprinttime{\jobname},\ 1767041618}} % https://www.site24x7.com/tools/time-stamp-converter.html (https://www.unixtimestamp.com/ bad)
+\fancyfoot[R]{{\tiny cardfin-c,\ \filemodprintdate{\jobname},\ \filemodprinttime{\jobname},\ 1767095642}} % https://www.site24x7.com/tools/time-stamp-converter.html (https://www.unixtimestamp.com/ bad)
 \renewcommand{\headrulewidth}{0pt}
 \fancyfoot[C]{\thepage}
 \usepackage[T1]{fontenc}
@@ -59,10 +59,10 @@ a&\text{if }x=b\\
 x&\text{otherwise.}
 \end{cases}
 $$ 
-The $[X,a,b]$ is its own inverse; in particular it is bijective. 
+Then $[X,a,b]$ is its own inverse; in particular it is bijective. 
 
 \begin{lem}\label{La}
-If $X$ and $Y$ are sets such that $X\simeq Y$, and if $a$ is in $X$ and $b$ in $Y$, then there is a bijection $X\to Y$ mapping $a$ to $b$.  
+If $X$ and $Y$ are sets such that $X\simeq Y$, and if $a\in X$ and $b\in Y$, then there is a bijection $X\to Y$ mapping $a$ to $b$.  
 \end{lem} 
 
 \begin{proof}
@@ -70,7 +70,7 @@ By assumption there is a bijection $f:X\to Y$. Then $[Y,f(a),b]\circ f$ does the
 \end{proof} 
 
 \begin{lem}\label{Lb}
-If $X$ and $Y$ are sets such that $X\simeq Y$, and if $a$ is in $X$ and $b$ in $Y$, then we have $X\setminus\{a\}\simeq Y\setminus\{b\}$.  
+If $X$ and $Y$ are sets such that $X\simeq Y$, and if $a\in X$ and $b\in Y$, then we have $X\setminus\{a\}\simeq Y\setminus\{b\}$.  
 \end{lem} 
 
 \begin{proof}
