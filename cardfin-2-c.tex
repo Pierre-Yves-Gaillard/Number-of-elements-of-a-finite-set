@@ -1,0 +1,85 @@
+% cardfin-2-c
+% https://docs.google.com/document/d/142ZZBYqM9hr4-VlQw8bWuuLHKV9WtxDAHWMzN1Nbf1Y/edit?tab=t.0
+% !TEX encoding = UTF-8 Unicode
+% https://www.site24x7.com/tools/time-stamp-converter.html 1767630946
+\documentclass[12pt,letterpaper]{article}
+\usepackage{fancyhdr}
+\fancyhf{}
+\fancyfoot[R]{{\tiny cardfin-2-c,\ \filemodprintdate{\jobname},\ \filemodprinttime{\jobname},\ 1767630946}} % https://www.site24x7.com/tools/time-stamp-converter.html (https://www.unixtimestamp.com/ bad)
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\thepage}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsmath,amsthm} 
+%\usepackage[letterpaper,top=30pt,left=40pt,right=40pt,bottom=60pt]{geometry}
+\usepackage[letterpaper,top=70pt,left=60pt,right=60pt,bottom=130pt]{geometry}
+\usepackage{filemod}%https://stackoverflow.com/questions/2118972/latex-command-for-last-modified
+\usepackage{microtype}
+%\usepackage{tikz-cd}\usepackage{varwidth}\usepackage{comment}
+\usepackage[pdfusetitle]{hyperref}
+%\usepackage{marvosym}% emoji https://tex.stackexchange.com/questions/3695/smileys-in-latex https://ctan.org/pkg/marvosym?lang=en
+\pagestyle{fancy}
+%\pagestyle{empty}
+%\setlength\parindent{0pt}
+\setlength{\parskip}{3pt} % variable
+%\renewcommand{\baselinestretch}{1.1} % variable
+\newtheorem{thm}{Theorem}%[section]
+%\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newcommand{\nn}{\noindent}
+\newcommand{\N}{\mathbb N}
+\begin{document}% \tiny \scriptsize \footnotesize \small \normalsize \large \Large \LARGE \huge \Huge 
+\begin{center}
+{\large Number of elements of a finite set}\footnote{This text is available at \\ \url{https://github.com/Pierre-Yves-Gaillard/Number-of-elements-of-a-finite-set}.}\medskip 
+
+{\footnotesize Pierre-Yves Gaillard}
+\end{center}
+
+\nn The statements proved here are almost obvious and not too difficult to find in the literature. I wrote this short text to make them as easily available as possible. 
+
+Let $\N$ be the set of nonnegative integers, and for each $n\in\N$ set $[n]:=\{1,2,\ldots,n\}$ (in particular $[0]=\varnothing$). If $X$ is a set, say that a bijection $[n]\to X$ is a \textbf{count} of $X$, and that $n$ is the \textbf{result} of the count. Say that $X$ is \textbf{finite} if it admits a count $[n]\to X$ for some $n\in\N$. 
+
+\begin{thm}\label{T}
+If a set $X$ is finite, then any two counts of $X$ give the same result. 
+\end{thm} 
+
+If such is the case and the result is $n$, we say that $X$ \textbf{has} $n$ \textbf{elements}. If $X$ and $Y$ are two sets, write $X\simeq Y$ to indicate that there is a bijection $X\to Y$. %The theorem will follow from the proposition below: 
+
+\begin{lem}\label{L} 
+Let $X$ and $Y$ be two sets; let $k$ be a positive integer; let $a_1,\ldots, a_k$ be distinct elements of $X$; let $b_1,\ldots, b_k$ be distinct elements of $Y$; and consider the following conditions: 
+\begin{enumerate}
+ \item[\emph{(a)}] $X\simeq Y$, 
+ \item[\emph{(b)}] $X\setminus\{a_1,\ldots, a_k\}\simeq Y\setminus\{b_1,\ldots, b_k\}$, 
+ \item[\emph{(c)}] $X=\{a_1,\ldots, a_k\}\Leftrightarrow Y=\{b_1,\ldots, b_k\}$. 
+\end{enumerate} 
+Then we have: \emph{(a)} $\Leftrightarrow$ \emph{(b)} $\Rightarrow$ \emph{(c)}.
+\end{lem} 
+
+\begin{proof}
+We clearly have (a) $\Leftarrow$ (b) $\Rightarrow$ (c). We show that (a) $\Rightarrow$ (b) when $k=1$. If $Z$ is any set and $a,b\in Z$, then we define the map $[Z,a,b]:Z\to Z$ by 
+$$
+[Z,a,b](z)=
+\begin{cases}
+b&\text{if }z=a\\ 
+a&\text{if }z=b\\ 
+z&\text{otherwise.}
+\end{cases}
+$$ 
+Then $[Z,a,b]$ is its own inverse; in particular it is bijective. By assumption there is a bijection $f:X\to Y$. Then $[Y,f(a_1),b_1]\circ f$, being a bijection from $X$ to $Y$ mapping $a_1$ to $b_1$, induces a bijection from $X\setminus\{a_1\}$ to $Y\setminus\{b_1\}$. For $k>1$ we have, assuming the implication holds for $k-1$, 
+$$
+X\setminus\{a_1,\ldots, a_k\}=(X\setminus\{a_1,\ldots, a_{k-1}\})\setminus\{a_k\}\simeq(Y\setminus\{b_1,\ldots, b_{k-1}\})\setminus\{b_k\}= Y\setminus\{b_1,\ldots, b_k\}.
+$$ 
+\end{proof}
+
+\begin{prop}\label{P}
+If $m,n\in\N$ satisfy $[m]\simeq[n]$, then we have $m=n$. 
+\end{prop} 
+
+\begin{proof}
+We assume $m\le n$ (as we may) and apply Lemma \ref{L}, (a) $\Rightarrow$ (c), with $X=[m],Y=[n],k=m$ and $a_i=b_i=i$ for $i=1,\ldots, m$. 
+\end{proof} 
+
+Theorem \ref{T} follows from Proposition \ref{P}. 
+
+\end{document}
