@@ -1,18 +1,18 @@
 % cardfin-2-c
 % https://docs.google.com/document/d/142ZZBYqM9hr4-VlQw8bWuuLHKV9WtxDAHWMzN1Nbf1Y/edit?tab=t.0
 % !TEX encoding = UTF-8 Unicode
-% https://www.site24x7.com/tools/time-stamp-converter.html 1767632310
+% https://www.site24x7.com/tools/time-stamp-converter.html 1767637544
 \documentclass[12pt,letterpaper]{article}
 \usepackage{fancyhdr}
 \fancyhf{}
-\fancyfoot[R]{{\tiny cardfin-2-c,\ \filemodprintdate{\jobname},\ \filemodprinttime{\jobname},\ 1767632310}} % https://www.site24x7.com/tools/time-stamp-converter.html (https://www.unixtimestamp.com/ bad)
+\fancyfoot[R]{{\tiny cardfin-2-c,\ \filemodprintdate{\jobname},\ \filemodprinttime{\jobname},\ 1767637544}} % https://www.site24x7.com/tools/time-stamp-converter.html (https://www.unixtimestamp.com/ bad)
 \renewcommand{\headrulewidth}{0pt}
 \fancyfoot[C]{\thepage}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{amssymb,amsmath,amsthm} 
 %\usepackage[letterpaper,top=30pt,left=40pt,right=40pt,bottom=60pt]{geometry}
-\usepackage[letterpaper,top=70pt,left=60pt,right=60pt,bottom=130pt]{geometry}
+\usepackage[letterpaper,top=60pt,left=60pt,right=60pt,bottom=120pt]{geometry}
 \usepackage{filemod}%https://stackoverflow.com/questions/2118972/latex-command-for-last-modified
 \usepackage{microtype}
 %\usepackage{tikz-cd}\usepackage{varwidth}\usepackage{comment}
@@ -38,7 +38,7 @@
 
 \nn The statements proved here are almost obvious and not too difficult to find in the literature. I wrote this short text to make them as easily available as possible. 
 
-Let $\N$ be the set of nonnegative integers, and for each $n\in\N$ set $[n]:=\{1,2,\ldots,n\}$ (in particular $[0]=\varnothing$). If $X$ is a set, say that a bijection $[n]\to X$ is a \textbf{count} of $X$, and that $n$ is the \textbf{result} of the count. Say that $X$ is \textbf{finite} if it admits a count $[n]\to X$ for some $n\in\N$. 
+Let $\N$ be the set of nonnegative integers, and for each $n\in\N$ set $[n]:=\{1,2,\ldots,n\}$ (in particular $[0]=\varnothing$). Let a bijection $[n]\to X$, where $X$ is a set, be called a \textbf{count} of $X$, and let $n$ be called the \textbf{result} of the count. We say that $X$ is \textbf{finite} if it admits a count $[n]\to X$ for some $n\in\N$. 
 
 \begin{thm}\label{T}
 If a set $X$ is finite, then any two counts of $X$ give the same result. 
@@ -77,7 +77,7 @@ If $m,n\in\N$ satisfy $[m]\simeq[n]$, then we have $m=n$.
 \end{prop} 
 
 \begin{proof}
-We assume $m\le n$ (as we may) and apply Lemma \ref{L}, (a) $\Rightarrow$ (c), with $X=[m],Y=[n],k=m$ and $a_i=b_i=i$ for $i=1,\ldots, m$. 
+We assume $0<m\le n$ (as we may) and apply Lemma \ref{L}, (a) $\Rightarrow$ (c), with $X=[m],Y=[n],k=m$ and $a_i=b_i=i$ for $i=1,\ldots, m$. 
 \end{proof} 
 
 Theorem \ref{T} follows from Proposition \ref{P}. 
