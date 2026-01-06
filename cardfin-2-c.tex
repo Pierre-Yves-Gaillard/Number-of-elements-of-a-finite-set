@@ -1,11 +1,11 @@
 % cardfin-2-c
 % https://docs.google.com/document/d/142ZZBYqM9hr4-VlQw8bWuuLHKV9WtxDAHWMzN1Nbf1Y/edit?tab=t.0
 % !TEX encoding = UTF-8 Unicode
-% https://www.site24x7.com/tools/time-stamp-converter.html 1767637544
+% https://www.site24x7.com/tools/time-stamp-converter.html 1767658625
 \documentclass[12pt,letterpaper]{article}
 \usepackage{fancyhdr}
 \fancyhf{}
-\fancyfoot[R]{{\tiny cardfin-2-c,\ \filemodprintdate{\jobname},\ \filemodprinttime{\jobname},\ 1767637544}} % https://www.site24x7.com/tools/time-stamp-converter.html (https://www.unixtimestamp.com/ bad)
+\fancyfoot[R]{{\tiny cardfin-2-c,\ \filemodprintdate{\jobname},\ \filemodprinttime{\jobname},\ 1767658625}} % https://www.site24x7.com/tools/time-stamp-converter.html (https://www.unixtimestamp.com/ bad)
 \renewcommand{\headrulewidth}{0pt}
 \fancyfoot[C]{\thepage}
 \usepackage[T1]{fontenc}
@@ -47,7 +47,7 @@ If a set $X$ is finite, then any two counts of $X$ give the same result.
 If this is the case and the result is $n$, we say that $X$ \textbf{has} $n$ \textbf{elements}. If $X$ and $Y$ are two sets, write $X\simeq Y$ to indicate that there is a bijection $X\to Y$. %The theorem will follow from the proposition below: 
 
 \begin{lem}\label{L} 
-Let $X$ and $Y$ be two sets; let $k$ be a positive integer; let $a_1,\ldots, a_k$ be distinct elements of $X$; let $b_1,\ldots, b_k$ be distinct elements of $Y$; and consider the following conditions: 
+Let $X$ and $Y$ be two sets; let $k$ be in $\N$; let $a_1,\ldots, a_k$ be distinct elements of $X$; let $b_1,\ldots, b_k$ be distinct elements of $Y$; and consider the following conditions: 
 \begin{enumerate}
  \item[\emph{(a)}] $X\simeq Y$, 
  \item[\emph{(b)}] $X\setminus\{a_1,\ldots, a_k\}\simeq Y\setminus\{b_1,\ldots, b_k\}$, 
@@ -57,7 +57,7 @@ Then we have: \emph{(a)} $\Leftrightarrow$ \emph{(b)} $\Rightarrow$ \emph{(c)}.
 \end{lem} 
 
 \begin{proof}
-We clearly have (a) $\Leftarrow$ (b) $\Rightarrow$ (c). We show that (a) $\Rightarrow$ (b) when $k=1$. If $Z$ is any set and $a,b\in Z$, then we define the map $[Z,a,b]:Z\to Z$ by 
+We clearly have (a) $\Leftarrow$ (b) $\Rightarrow$ (c). Let us show that (a) $\Rightarrow$ (b). The case $k=0$ is obvious. Assume $k=1$. If $Z$ is any set and $a,b\in Z$, then we define the map $[Z,a,b]:Z\to Z$ by 
 $$
 [Z,a,b](z)=
 \begin{cases}
@@ -66,7 +66,7 @@ a&\text{if }z=b\\
 z&\text{otherwise.}
 \end{cases}
 $$ 
-Then $[Z,a,b]$ is its own inverse; in particular it is bijective. By assumption there is a bijection $f:X\to Y$. Then $[Y,f(a_1),b_1]\circ f$, being a bijection from $X$ to $Y$ mapping $a_1$ to $b_1$, induces a bijection from $X\setminus\{a_1\}$ to $Y\setminus\{b_1\}$. For $k>1$ we have, assuming the implication holds for $k-1$, 
+Then $[Z,a,b]$ is its own inverse; in particular it is bijective. By assumption there is a bijection $f:X\to Y$. Then $[Y,f(a_1),b_1]\circ f$, being a bijection from $X$ to $Y$ mapping $a_1$ to $b_1$, induces a bijection from $X\setminus\{a_1\}$ to $Y\setminus\{b_1\}$. If $k>1$ we have, assuming the implication holds for $k-1$, 
 $$
 X\setminus\{a_1,\ldots, a_k\}=(X\setminus\{a_1,\ldots, a_{k-1}\})\setminus\{a_k\}\simeq(Y\setminus\{b_1,\ldots, b_{k-1}\})\setminus\{b_k\}= Y\setminus\{b_1,\ldots, b_k\}.
 $$ 
@@ -77,7 +77,7 @@ If $m,n\in\N$ satisfy $[m]\simeq[n]$, then we have $m=n$.
 \end{prop} 
 
 \begin{proof}
-We assume $0<m\le n$ (as we may) and apply Lemma \ref{L}, (a) $\Rightarrow$ (c), with $X=[m],Y=[n],k=m$ and $a_i=b_i=i$ for $i=1,\ldots, m$. 
+We assume $m\le n$ (as we may) and apply Lemma \ref{L}, (a) $\Rightarrow$ (c), with $X=[m],Y=[n],k=m$ and $a_i=b_i=i$ for $i=1,\ldots, m$. 
 \end{proof} 
 
 Theorem \ref{T} follows from Proposition \ref{P}. 
