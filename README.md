@@ -4,4 +4,4 @@ I believe that Dedekind was the first person to define the number of elements in
 
 It is also defined on p. 53 of Halmos's [**Naive Set Theory**](http://people.whitman.edu/~guichard/260/halmos__naive_set_theory.pdf) (1960).
 
-Latest version: [cardfin-4-a.pdf](https://github.com/Pierre-Yves-Gaillard/Number-of-elements-of-a-finite-set/blob/main/cardfin-4-a.pdf) and [cardfin-4-a.tex](https://github.com/Pierre-Yves-Gaillard/Number-of-elements-of-a-finite-set/blob/main/cardfin-4-a.tex).
+Latest version: [cardfin-4-a.pdf](https://github.com/Pierre-Yves-Gaillard/Number-of-elements-of-a-finite-set/blob/main/cardfin-4-a.pdf) and [cardfin-4-a.tex](https://github.com/Pierre-Yves-Gaillard/Number-of-elements-of-a-finite-set/blob/main/cardfin-4-a.tex). Here is a [Google Doc version](https://docs.google.com/document/d/123JwFqJgM3uYtPZbh3fWzWKHHRBFTbMiPHIyoHiHDIc/edit?usp=sharing), which can be downloaded as an epub file.
